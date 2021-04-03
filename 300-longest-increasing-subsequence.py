@@ -7,12 +7,10 @@ class Solution:
         temp = [1]*len(nums)
         
         for i in range(1,len(nums)):  
-            x,y = 0,i
+            # i, j pointers to 0 and end of sub array
             
-            while x != y:
-                if nums[x] < nums[y] and temp[x]+1 > temp[y]:
-                    temp[y] = temp[x]+1
+            for j in range(i):
+                if nums[j] < nums[i] and temp[j]+1 > temp[i]:
+                    temp[i] = temp[j]+1
                 
-                x+=1
-
         return max(temp)
