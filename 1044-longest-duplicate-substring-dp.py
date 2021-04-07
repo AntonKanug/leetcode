@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/longest-duplicate-substring/
 # hard - dp version
 
+# optimal - trie and duplicates in branches
+
 class Solution:
     def longestDupSubstring(self, s: str) -> str:
         
