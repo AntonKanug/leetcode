@@ -10,9 +10,7 @@ class Solution:
         
         for i in S:
             if i == '0':
-                if not ones:
-                    continue
-                else:
+                if ones:
                     flip+=1
             else:
                 ones+=1
