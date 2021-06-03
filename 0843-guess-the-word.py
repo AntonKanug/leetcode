@@ -3,6 +3,11 @@
 # O(n) - space
 # hard
 
+# P(0) = 80%
+# P(1) = 19%
+# P(2...6) < 2%
+# P(x) = C(n,x) * 1/26 ^ x * (25/26) ^ 6-x
+
 # """
 # This is Master's API interface.
 # You should not implement it, or speculate about its implementation
