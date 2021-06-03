@@ -29,7 +29,7 @@ class Solution:
         newhead = None
     
         while(head):
-            temp2 = ListNode(head.val, head.next)
+            temp2 = ListNode(head.val, None)
             temp2.next = newhead
          
             newhead = temp2
