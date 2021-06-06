@@ -1,10 +1,10 @@
 # https://leetcode.com/problems/car-fleet/submissions/
+
 # Idea 
 # Sort all cars by positions
 # Calculate time it takes to reach end
-
 # Every car thats behind the slowerst car (by TIME not speed) will become one fleet
-# Update lognest time
+# Update longest time
 # Repeat
 
 # O(nlgn) - time
