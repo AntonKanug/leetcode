@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/max-value-of-equation/submissions/
 # Using deque (slideing window)
 # Condition is xj-xi < k
 # O(n) - time
