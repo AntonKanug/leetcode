@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/kth-largest-element-in-a-stream/submissions/
-# O(lg n) - Time, heapify
+# O(n) - Time, initial heapify
+# O(lg k) - Time, add 
 # O(k) - Space, heap
 
 # Idea:
