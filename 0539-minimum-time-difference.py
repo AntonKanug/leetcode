@@ -2,11 +2,11 @@
 # O(nlgn) - Time, sort
 # O(n) - Space
 
-# Could be done in O(n) time by using O(2400) size array
+# Could be done in O(n) time by using O(24*60) size array
 # Create arr size of (24*60) of bool (all false)
 # Iterate again and arr[i.value] = True
 # Find min diff of true vals and max
-# Trade off is size 2400 array 
+# Trade off is size 24*60 array 
 
 # Idea:
 # hours * 60 + mins
