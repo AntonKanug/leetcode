@@ -50,6 +50,7 @@ class Solution:
             else: have[i] = 0            
 
         while (right < len(s) or left < len(s)):
+            # Have all letters
             if (totalReq == totalHave):
                 # Update smallest string
                 if (right - left < minSize):
@@ -57,22 +58,25 @@ class Solution:
                     minSize = right - left
                     
                 # Moving left
+                # If left is needed
                 if (s[left] in required):
-                    if (not have[s[left]] > required[s[left]]):
+                    # left is requied to have size
+                    if (have[s[left]] <= required[s[left]]):
                         totalHave-=1
                     have[s[left]] -=1
                 left+=1
                 
             # Moving right
             elif (right < len(s)):
+                # Right string is required
                 if (s[right] in required):
+                    # It is needed to complete string
                     if (have[s[right]] < required[s[right]]):
                         totalHave+=1
                     have[s[right]] +=1
                 right+=1
 
-            else: 
-                break
+            else: break
              
         return s[sL:sR]
             
