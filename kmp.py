@@ -37,8 +37,9 @@ def kmp(s: str, k: str):
     kmp_table = makeTable(k)
 
     count = 0
-    j = 0
-    i = 0
+    # i for main string
+    # j for string to match (kmp table)
+    i, j = 0, 0
     while i < len(s):
         if s[i] == k[j]:
             j += 1
