@@ -7,21 +7,17 @@ class Solution:
         def helper(cur, opening, closing):
             
             # If maxlen -> string found
-            if len(cur) == n*2: 
+            if opening == n and closing == n: 
                 output.append(cur)
                 return
             
             # If a string has less than n openings add one
             if opening < n:
-                cur+='('
-                helper(cur, opening+1, closing)
-                cur=cur[:-1]
+                helper(cur+'(', opening+1, closing)
              
             # If a string has more opening that closing add a closing
             if opening > closing:
-                cur+=')'
-                helper(cur, opening, closing+1)
-                cur=cur[:-1]
+                helper(cur+')', opening, closing+1)
                 
         helper('',0,0)
         
