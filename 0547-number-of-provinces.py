@@ -23,5 +23,6 @@ class Solution:
                     if val and j not in visited:
                         visited.add(j)
                         toVisit.append(j)
+                        
         return count
                 
