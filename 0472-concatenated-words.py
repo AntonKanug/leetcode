@@ -16,6 +16,7 @@ class Solution:
                     if suffix not in cache:
                         cache[suffix] = helper(suffix, True)
                     if cache[suffix]:
+                        cache[word] = True
                         return True
                 
             return secondWord and word in words and word
