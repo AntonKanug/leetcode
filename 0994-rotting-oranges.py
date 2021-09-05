@@ -8,6 +8,7 @@ class Solution:
         visited = set()
         maxMin = 0        
         oranges = 0
+        rotten = 0
         
         for i in range(len(grid)):
             for j in range(len(grid[0])):
@@ -16,8 +17,7 @@ class Solution:
                 elif grid[i][j] == 2:
                     # [x,y,minute]
                     q.append([i,j,0])
-               
-        visitedOranges = set()
+                    rotten+=1
         
         while q:
             i,j,m = q.popleft()
@@ -32,8 +32,5 @@ class Solution:
                 if not(0<=x<len(grid) and 0<=y<len(grid[0])): continue
                 if (x,y) not in visited and grid[x][y] == 1:
                     q.append([x,y,m+1])
-                    visitedOranges.add((x,y))
         
-        return maxMin if len(visitedOranges) == oranges else -1
-
-    
+        return maxMin if len(visited)-rotten == oranges else -1
